@@ -1,0 +1,37 @@
+---
+layout: default
+title: Blog
+description: Thoughts on AI development, engineering, and building products.
+---
+
+<section style="padding-top: 8rem;">
+    <div class="section-inner">
+        <div class="section-label">Blog</div>
+        <h2 class="section-title">Writing</h2>
+        <p class="section-desc">
+            Thoughts on AI development, engineering, and building products.
+        </p>
+
+        <div class="blog-list">
+            {% for post in site.posts %}
+            <div class="blog-post-entry">
+                <a href="{{ post.url | relative_url }}">
+                    <div class="blog-post-meta">
+                        <span>{{ post.date | date: "%B %-d, %Y" }}</span>
+                        {% assign words = post.content | number_of_words %}
+                        {% assign minutes = words | divided_by: 200 %}
+                        {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+                        <span>{{ minutes }} min read</span>
+                    </div>
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% if site.posts.size == 0 %}
+        <p style="color: var(--text-dim);">No posts yet. Check back soon.</p>
+        {% endif %}
+    </div>
+</section>
