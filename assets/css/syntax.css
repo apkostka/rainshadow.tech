@@ -1,0 +1,59 @@
+/* Syntax highlighting — Rouge (dark theme matching site palette) */
+.highlight {
+    background: #111113;
+    color: #fafafa;
+    border-radius: 6px;
+    border: 1px solid #27272a;
+    padding: 1.5rem;
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.highlight pre {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.highlight code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* Comments */
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs, .highlight .cp { color: #71717a; font-style: italic; }
+/* Strings */
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sc, .highlight .sh, .highlight .sx { color: #79a775; }
+/* String interpolation / escape */
+.highlight .si, .highlight .se { color: #a3c99e; }
+/* Keywords */
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kc, .highlight .kt { color: #c4b5fd; }
+/* Numbers */
+.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh, .highlight .mo, .highlight .il { color: #f9a875; }
+/* Function names / methods */
+.highlight .nf, .highlight .fm, .highlight .nx { color: #7dd3fc; }
+/* Class names / types */
+.highlight .nc, .highlight .nn, .highlight .no { color: #fde68a; }
+/* Operators */
+.highlight .o, .highlight .ow { color: #a1a1aa; }
+/* Punctuation */
+.highlight .p { color: #a1a1aa; }
+/* Variables */
+.highlight .n, .highlight .na, .highlight .nb, .highlight .ni, .highlight .ne, .highlight .nv, .highlight .vi, .highlight .vg, .highlight .vc { color: #fafafa; }
+/* Builtin names */
+.highlight .nb { color: #7dd3fc; }
+/* Decorators / annotations */
+.highlight .nd { color: #c4b5fd; }
+/* Error */
+.highlight .err { color: #f87171; }
+/* Generic */
+.highlight .gd { color: #f87171; } /* deletion */
+.highlight .gi { color: #79a775; } /* insertion */
+.highlight .gh, .highlight .gu { color: #c4b5fd; font-weight: bold; } /* heading/subheading */
+/* Line numbers */
+.highlight .lineno { color: #3f3f46; user-select: none; padding-right: 1rem; }
