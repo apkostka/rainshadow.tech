@@ -1,6 +1,7 @@
 title: Rain Shadow
 description: AI-First Development & Consulting
 url: "https://rainshadow.tech"
+repository: apkostka/rainshadow.tech
 
 markdown: kramdown
 highlighter: rouge
