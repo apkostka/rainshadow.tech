@@ -5,3 +5,6 @@ _site/
 vendor/
 Gemfile.lock
 .sass-cache/
+node_modules/
+.jampack/
+package-lock.json
