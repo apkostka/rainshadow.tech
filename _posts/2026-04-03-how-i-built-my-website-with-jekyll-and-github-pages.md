@@ -8,7 +8,7 @@ series: "Building a Blog That Works For You"
 series_part: 1
 ---
 
-This is Part 1 of a series on how I run the Rain Shadow blog end-to-end. This post covers the foundation: setting up the site with Jekyll and GitHub Pages, handling images so they don't tank your load times, and getting SEO right from day one. In [Part 2](/blog/finding-ideas-and-drafting-with-claude), I'll walk through how I find blog ideas and use Claude to go from rough concept to polished draft.
+This is Part 1 of a series on how I run the Rain Shadow blog end-to-end. This post covers the foundation: setting up the site with Jekyll and GitHub Pages, handling images so they don't tank your load times, and getting SEO right from day one. In [Part 2](/blog/2026/04/06/finding-ideas-and-drafting-with-claude), I'll walk through how I find blog ideas and use Claude to go from rough concept to polished draft.
 
 ---
 
@@ -108,4 +108,4 @@ The stack is deliberately simple, and that's the point. The less time I spend on
 
 ---
 
-*Next up in this series: [Part 2, Finding Ideas and Drafting Posts With Claude](/blog/finding-ideas-and-drafting-with-claude). I'll walk through how I source blog topics from AI news, industry trends, and my own project work, and how I use Claude to turn a rough idea into a publishable draft without losing my voice.*
+*Next up in this series: [Part 2, Finding Ideas and Drafting Posts With Claude](/blog/2026/04/06/finding-ideas-and-drafting-with-claude/). I'll walk through how I source blog topics from AI news, industry trends, and my own project work, and how I use Claude to turn a rough idea into a publishable draft without losing my voice.*
