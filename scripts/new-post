@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+POSTS_DIR="$(cd "$(dirname "$0")/.." && pwd)/_posts"
+
+# Parse arguments
+TITLE=""
+TAGS=""
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -t|--tags) TAGS="$2"; shift 2 ;;
+    *) TITLE="$1"; shift ;;
+  esac
+done
+
+if [[ -z "$TITLE" ]]; then
+  echo "Usage: scripts/new-post \"Post Title\" [-t \"tag1, tag2\"]"
+  exit 1
+fi
+
+DATE=$(date +%Y-%m-%d)
+SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | tr -cs '[:alnum:]' '-' | sed 's/^-//;s/-$//')
+FILENAME="${POSTS_DIR}/${DATE}-${SLUG}.md"
+
+if [[ -f "$FILENAME" ]]; then
+  echo "Error: $FILENAME already exists"
+  exit 1
+fi
+
+TAGS_LINE=""
+if [[ -n "$TAGS" ]]; then
+  TAGS_LINE="tags: [${TAGS}]"
+else
+  TAGS_LINE="tags: []"
+fi
+
+cat > "$FILENAME" << EOF
+---
+layout: post
+title: "${TITLE}"
+date: ${DATE}
+${TAGS_LINE}
+---
+
+EOF
+
+echo "Created $FILENAME"
