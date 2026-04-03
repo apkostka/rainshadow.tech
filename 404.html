@@ -1,0 +1,36 @@
+---
+layout: default
+permalink: /404.html
+title: "Page Not Found"
+---
+
+<section class="error-page">
+    <div class="section-inner">
+        <h1>Page not found</h1>
+        <p>This page doesn't exist or may have been moved.</p>
+        <a href="{{ '/' | relative_url }}" class="btn-primary">Back to Home</a>
+
+        {% if site.posts.size > 0 %}
+        <div class="error-recent-posts">
+            <h2>Recent Posts</h2>
+            <div class="blog-list">
+                {% for post in site.posts limit:3 %}
+                <div class="blog-post-entry">
+                    <a href="{{ post.url | relative_url }}">
+                        <div class="blog-post-meta">
+                            <span>{{ post.date | date: "%B %-d, %Y" }}</span>
+                            {% assign words = post.content | number_of_words %}
+                            {% assign minutes = words | divided_by: 200 %}
+                            {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+                            <span>{{ minutes }} min read</span>
+                        </div>
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
