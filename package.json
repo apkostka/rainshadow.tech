@@ -1,0 +1,16 @@
+{
+  "name": "rainshadow-tech",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Rain Shadow Tech - AI-First Development & Consulting",
+  "scripts": {
+    "optimize": "node scripts/optimize-images.js",
+    "jampack": "jampack ./_site"
+  },
+  "dependencies": {
+    "sharp": "^0.33.3"
+  },
+  "devDependencies": {
+    "@divriots/jampack": "^0.23.4"
+  }
+}
