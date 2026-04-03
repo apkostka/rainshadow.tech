@@ -8,3 +8,4 @@ Gemfile.lock
 node_modules/
 .jampack/
 package-lock.json
+*.webp
