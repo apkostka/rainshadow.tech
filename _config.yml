@@ -10,9 +10,57 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+# Plugins (all bundled with github-pages gem)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+
+# SEO: Author info (used by jekyll-seo-tag for JSON-LD)
+author:
+  name: "Andrew Kostka"
+  url: "https://rainshadow.tech"
+
+# SEO: Site logo for structured data
+logo: /assets/img/rainshadow_logo.png
+
+# SEO: Social links (used by jekyll-seo-tag for JSON-LD Organization)
+social:
+  name: Rain Shadow
+  links:
+    - https://www.linkedin.com/company/rainshadow-tech
+    - https://x.com/rainshadow_tech
+    - https://bsky.app/profile/rainshadow-tech.bsky.social
+
+# SEO: Twitter/X card type
+twitter:
+  card: summary_large_image
+
+# SEO: Default front matter for posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      image: /assets/img/rainshadow_logo.png
+
+# Analytics
+posthog:
+  api_key: "phc_tof437PekmgcTMkYN9S9rEQeKMjVFYrT3VptEfiAiKZz"
+  api_host: "https://us.i.posthog.com"
+
+# Feed settings
+feed:
+  path: /feed.xml
+
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
   - docs/
   - vendor/
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - scripts/
+  - .jampack/
