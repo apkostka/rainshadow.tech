@@ -32,6 +32,6 @@ function copyLink() {
     var label = document.getElementById('copy-label');
     label.textContent = 'Copied!';
     setTimeout(function() { label.textContent = 'Copy link'; }, 2000);
-  });
+  }).catch(function() {});
 }
 </script>

@@ -7,5 +7,4 @@ Gemfile.lock
 .sass-cache/
 node_modules/
 .jampack/
-package-lock.json
 *.webp
